@@ -6,6 +6,10 @@ from inspect import getmodule
 from pprint import pprint
 
 
+class MyClass:
+    pass
+
+
 def introspection_info(obj):
     obj_info = {}
     try:
@@ -22,7 +26,7 @@ def introspection_info(obj):
     return obj_info
 
 try:
-    obj = 42
+    obj = MyClass
     result = introspection_info(obj)
     pprint(result)
 except NameError as n_err:
